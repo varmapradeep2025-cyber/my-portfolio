@@ -1,4 +1,7 @@
 
+
+                    
+                                      
 "use client"
 import React, { useState } from 'react';
 import {
@@ -18,12 +21,11 @@ import "next-cloudinary/dist/cld-video-player.css";
 const App = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const workExperience = [
-        { id: '', title: 'Campus Ambassador', company: 'Horizon Studio' },
-        { id: 'samples/two-ladies', title: 'Management Team Member', company: 'Layers' },
-        { id: 'samples/ecommerce/leather-bag-gray', title: 'Contibutor', company: 'Archetype' },
-        { id: 'samples/animals/reindeer', title: 'Student Co-Ordinator', company: 'Monograph' },
-        { id: 'samples/food/dessert', title: 'Google Developer Program Campus Lead', company: 'Fieldwork' },
-        { id: 'samples/landscapes/beach-boat', title: 'Content Writer', company: 'Construct' },
+        { title: 'Campus Ambassador', company: 'GeeksForGeeks' },
+        { title: 'Management Team Member', company: 'AmityCodingClu' },
+        { title: 'Contibutor', company: 'GirlscriptSummer Of Code' },
+        { title: 'Google Developer Program ', company: 'Google for Developers' },
+
     ];
     const videoProjects = [
         {
@@ -99,14 +101,14 @@ const App = () => {
                             I'm Varma Pradeep,an Artificial Intelligence(A.I)and Machine Learning(ML)student.
                         </p>
                         <h1 className="text-5xl md:text-8xl font-extralight tracking-tighter mb-6 leading-[0.9] uppercase text-zinc-900">
-                            Sharon <br />
+                            Pradeep <br />
 
 
                             <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-400">Yelenik</span>
                         </h1>
                         <p className="text-lg md:text-2xl text-zinc-500 font-light leading-relaxed mb-10 max-w-lg">
                             Currently,I am exploring and working on my Frontend skills by learning languages like HTML,CSS AND
-                            Along with that,practicing DSA to enhance my problem-solving skills.T have completed topics like Hashing,Searching(Linear and Binary Search)and Array(1-D and 2-D).
+                            Along with that,practicing DSA to enhance my problem-solving skills.T have completed topics like Hashing,Searching(Linear and Binary Search)and Array(1-D and 2-D),Linked List.
                         </p>
                         <div className="flex flex-wrap justify-center md:justify-start gap-4">
                             <a href="#contact" className="px-10 py-4 bg-zinc-900 text-white rounded-full font-semibold hover:bg-zinc-700 transition-all hover:scale-105 flex items-center gap-2">
@@ -139,23 +141,9 @@ const App = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                         {workExperience.map((job, idx) => (
                             <div key={idx} className="group relative">
-                                <div className="relative aspect-square overflow-hidden rounded-[3rem] bg-zinc-50 border border-zinc-100 transition-all duration-700 hover:shadow-2xl hover:shadow-rose-100">
-                                    <CldImage
-                                        src={job.id}
-                                        alt={job.title}
-                                        fill
-                                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                                        crop="fill"
-                                        gravity="auto"
-                                        format="auto"
-                                        quality="auto"
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-40 group-hover:opacity-80 transition-opacity" />
-                                    <div className="absolute bottom-0 left-0 p-12 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                                        <p className="text-amber-300 font-mono text-[10px] uppercase tracking-[0.3em] mb-2">{job.company}</p>
-                                        <h3 className="text-3xl font-light text-white">{job.title}</h3>
-                                    </div>
+                                <div className="relative h-full min-h-[300px] p-12 flex flex-col justify-end overflow-hidden rounded-[3rem] bg-zinc-900 border border-zinc-800 transition-all duration-700 hover:shadow-2xl hover:shadow-rose-500/10 hover:-translate-y-2">
+                                    <p className="text-amber-500 font-mono text-[10px] uppercase tracking-[0.3em] mb-2">{job.company}</p>
+                                    <h3 className="text-3xl font-light text-white">{job.title}</h3>
                                 </div>
                             </div>
                         ))}
